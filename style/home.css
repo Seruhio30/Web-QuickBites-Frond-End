@@ -1,0 +1,53 @@
+/* Estilo global */
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilos para el contenedor del header */
+
+/* Estilos para el logo */
+.logo {
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilos para el menú */
+
+
+
+
+.hero {
+ 
+    width: 100%;
+    height: 600px; /* Ajusta la altura según sea necesario */
+    background-image: url('../img/hero.webp'); /* Ruta de la imagen */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* Estilo del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
