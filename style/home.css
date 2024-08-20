@@ -1,150 +1,12 @@
-/* Estilo global */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Roboto', 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-}
-
-/* Estilos para el contenedor del header */
-
-a {
-    display: inline-block;
-}
-
-
-section {
-    position: relative;
-}
-
-.cabecera {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: #f3aa3588 ; /* Fondo transparente por defecto */
-    color: black; /* Color del texto por defecto */
-    transition: background-color 1s ease-in-out, color 1.5s ease-in-out;
-}
-
-.cabecera.nosotros {
-    background-color: #ada69b88 ; /* Fondo para la sección "nosotros" */
-    color:  #732e06; /* Texto blanco */
-}
-
-.cabecera.menu {
-    background-color: #373b40b4; /* Fondo para la sección "menu" */
-    color: #ffffff; /* Texto dorado */
-}
-
-.cabecera.seccion3 {
-    background-color: #abcdef; /* Fondo para la tercera sección */
-    color: #333333; /* Texto oscuro */
-}
-/* Estilos por sección con la misma transición */
-.cabecera.nosotros,
-.cabecera.menu,
-.cabecera.seccion3 {
-    transition: background-color 1s ease-in-out, color 1.5s ease-in-out;
-}
-
-/* Asegúrate de que los enlaces del menú tomen el color correcto */
-.cabecera.nosotros .menu a,
-.cabecera.menu .menu a,
-.cabecera.seccion3 .menu a {
-    color: inherit; /* Hereda el color del header */
-}
-
-
-.cabecera .link-logo {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.cabecera .link-logo .logo {
-    width: 100px;
-    height: auto;
-    padding-left: 30px;
-}
-
-.cabecera .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.cabecera .menu a  {
-    color: #000;
-    margin-left: 7.5px;
-    margin-right: 7.5px;
-    padding-right: 40px;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: transforn 0.3s ease;
-}
-
-
-
-Estado de los enlaces cuando se ha hecho scroll 
-.cabecera-scrolled {
-    background-color: #83767664; /* Cambia el color de fondo */
-    color: white; /* Cambia el color del texto */
-    transition: background-color 1s ease-in-out, color 1.5s ease-in-out;
-}
-
-.cabecera .menu a:hover {
-    background-color: ;
-    transform: scale(1.3);
-}
-
-.cabecera .hamb{
-    color: rgba(230, 154,35,1);
-    font-size: 40px;
-    display: none;
-
-}
-
-
-
-/* Estilos para el menú */
-/*hero*/
-#banner {
-    position: relative;
-    width: 100%;
-    max-width: 1350px;
-    height: auto; /* Ajusta según la imagen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-home {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* filter: brightness(0.7) contrast(1.2) saturate(1); */
-}
-
-.columna-titulo {
-    position: absolute; /* Esto permite que el contenido se posicione sobre la imagen */
-    top: 40%; /* Ajusta para mover el texto hacia abajo */
-    left: 33%;
-    transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
-    text-align: center;
-    color: white; /* Color del texto, ajusta según el fondo */
-    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 h1 {
@@ -157,9 +19,71 @@ h3 {
     margin: 0;
 }
 
-.boton-transparente {
-    margin-top: 20px;
-    padding: 10px 20px;
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(243, 170, 53, 0.403);
+    color: #333;
+    /* padding: 10px 0; */
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* estilos para el menu navegacion y logo */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+   
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.hamb{
+    color: rgba(230, 154,35,1);
+    font-size: 40px;
+    display: none;
+
+}
+
+/* Estilos para el menú */
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    height: auto; /* Ajusta según la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    position: absolute; /* Esto permite que el contenido se posicione sobre la imagen */
+    top: 60%; /* Ajusta para mover el texto hacia abajo */
+    left: 33%;
+    transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
+    text-align: center;
+    color: white; /* Color del texto, ajusta según el fondo */
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+.btn {
+    
     border: 2px solid white;
     color: white;
     background-color: transparent;
@@ -169,15 +93,19 @@ h3 {
     transition: background-color 0.3s ease;
 }
 
-.boton-transparente:hover {
+.btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*nosotros*/
-
 .nosotros {
     padding: 20px;
     margin-top: 40px;
+}
+
+.nos {
+    text-align: center;
+    color: #f46e20;
 }
 
 .grid-container {
@@ -188,6 +116,7 @@ h3 {
 }
 .text-container {
     padding: 20px;
+    color: #000;
 }
 
 
@@ -202,7 +131,8 @@ h3 {
 /* Estilos menu*/
 .titulo-menu {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    color: #f46e20;
 }
 .productos {
     list-style: none;
@@ -210,6 +140,7 @@ h3 {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -217,12 +148,15 @@ h3 {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
     max-width: 300px;
+    /* background-color: #f46e20; */
 }
 
 .card-img {
     width: 100%;
     height: auto;
+   
 }
 
 .card-content {
@@ -236,10 +170,6 @@ h3 {
     color: #000;
 }
 
-/* .card-description {
-    font-size: 1em;
-    color: #666;
-} */
 
 .card-price {
     font-size: 1.2em;
@@ -248,22 +178,13 @@ h3 {
     margin-top: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Estilo del pie de página */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #f46e20;
+    color: black;
     text-align: center;
     padding: 1em 0;
+    margin-top: 20px;
     position: relative;
     width: 100%;
     bottom: 0;

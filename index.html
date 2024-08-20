@@ -11,41 +11,38 @@
     <link rel="stylesheet" href="style/home.css">
 </head>
 <body>
-    <header class="cabecera">
+    <header class="header">
         <div class="container">
-            <a href="index.html" class="link-logo">
-                <img class="logo" src="img/QuickBiteslogo.png" alt="">
+            
+            <a href="index.html">
+                <img src="img/QuickBiteslogo.png" alt="Quick Bites Logo"class="logo">
             </a>
-            <nav class="menu"> 
-                <a href="index.html#inicio">Inicio</a>
-                <a href="index.html#menu">Menu</a>
+            <nav class="nav">
+                <a href="#banner">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#menu">Menú</a>
                 <a href="pedidos.html">Pedidos</a>
                 <a href="contacto.html">Contacto</a>
-    
             </nav>
-            <a href="#" class="hamb"><i class="fa-solid fa-bars"></i></a>
         </div>
-       
     </header>
-
     <main>
-        <section id="banner" class="section">
-            <img class="banner-home" src="img/hero.webp" alt="" width="1350" height="900">
-            <div class="container">
-                <div class="fila">
-                    <div class="columna-titulo" >
-                        <h1>
-                            Quick Bites <h3>Fast Food</h3>
-                        </h1>
-                        
-                        <a href="#menu" class="btn boton-transparente">Ver Menu</a>
-                    </div>
-                </div>
+        <section class="hero" id="banner">
+            <img src="img/Pulled Pork/hero.webp" alt="Banner" class="banner">
+            <div class="content">
+                <h1>Quick Bites</h1>
+                <h3>Fast Food</h3>
+                <a href="#menu" class="btn">Ordenar</a>
             </div>
         </section>
 
         <section class="nosotros" id="nosotros">
+            <div class="nos">
+                <h1>Quick Bites</h1>
+            </div>
+           
             <div class="grid-container">
+                
                 <div class="text-container">
                     <h4>Quick Bites</h4>
                     <h1>Deliciosa Comida Rapida Para Llevar</h1>
@@ -62,13 +59,15 @@
         </section>
 
         <section class="menu" id="menu">
+
+            
             <div class="titulo-menu">
                 <h1>Menu</h1>
             </div>
             <ul class="productos">
                 <li class="card">
                     <article>
-                        <img src="img/birria-arrriba.jpg" alt="Pulled Pork" class="card-img">
+                        <img src="img/Pulled Pork/pulled-pork-B.jpg" alt="Pulled Pork" class="card-img">
                         <div class="card-content">
                             <h2 class="card-title">Pulled Pork</h2>
                             <!-- <p class="card-description">Con tijera o máquina, a gusto del cliente</p> -->
@@ -79,7 +78,7 @@
 
                 <li class="card">
                     <article>
-                        <img src="img/birria-arrriba.jpg" alt="Chiken Burger" class="card-img">
+                        <img src="img/chikenBurgerOrange.webp" alt="Chiken Burger" class="card-img">
                         <div class="card-content">
                             <h2 class="card-title">Chiken Burger</h2>
                             <!-- <p class="card-description">Con tijera o máquina, a gusto del cliente</p> -->
