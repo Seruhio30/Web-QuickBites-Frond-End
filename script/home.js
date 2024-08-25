@@ -1,28 +1,21 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const header = document.querySelector('.cabecera');
-//     const sections = document.querySelectorAll('section');
+document.addEventListener('DOMContentLoaded', function() {
 
-//     const observerOptions = {
-//         root: null,
-//         rootMargin: '0px',
-//         threshold: 0.5
-//     };
+    document.querySelectorAll('.ver-ingredientes').forEach(button => {
+        button.addEventListener('click', function() {
+            const itemContainer = this.closest('.item').querySelector('.item-container');
+            itemContainer.classList.toggle('rotar');
+        });
+    });
 
-//     const observerCallback = (entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 const sectionId = entry.target.getAttribute('id');
-//                 header.classList.remove('nosotros', 'menu', 'seccion3');
-//                 if (sectionId) {
-//                     header.classList.add(sectionId);
-//                 }
-//             }
-//         });
-//     };
+    document.querySelectorAll('.ordenar').forEach(button => {
+        button.addEventListener('click', function() {
+            const producto = this.closest('.item').querySelector('.producto-nombre').textContent;
+            const precio = parseFloat(this.closest('.item').querySelector('.producto-precio').dataset.price);
+            const cantidad = this.closest('.item').querySelector('input[type="number"]') ? 
+                             this.closest('.item').querySelector('input[type="number"]').value : 1;
 
-//     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-//     sections.forEach(section => {
-//         observer.observe(section);
-//     });
-// });
+            // Redirigir a la página de orden con producto, cantidad y precio en la URL
+            window.location.href = `ordenar.html?producto=${encodeURIComponent(producto)}&precio=${precio}&cantidad=${cantidad}`;
+        });
+    });
+});

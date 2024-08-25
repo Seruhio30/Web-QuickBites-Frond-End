@@ -1,3 +1,4 @@
+/* Estilos globales */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,12 +26,10 @@ h3 {
     width: 100%;
     background-color: rgba(243, 170, 53, 0.403);
     color: #333;
-    /* padding: 10px 0; */
     z-index: 1000;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* estilos para el menu navegacion y logo */
 .container {
     display: flex;
     justify-content: space-between;
@@ -43,7 +42,6 @@ h3 {
 .logo {
     width: 80px;
     height: 80px;
-   
 }
 
 .nav a {
@@ -54,36 +52,33 @@ h3 {
     transition: color 0.3s;
 }
 
-.hamb{
-    color: rgba(230, 154,35,1);
+.hamb {
+    color: #e69a23;
     font-size: 40px;
     display: none;
-
 }
 
-/* Estilos para el menú */
 .banner {
     position: relative;
     width: 100%;
     max-width: 1350px;
-    height: auto; /* Ajusta según la imagen */
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content{
-    position: absolute; /* Esto permite que el contenido se posicione sobre la imagen */
-    top: 60%; /* Ajusta para mover el texto hacia abajo */
-    left: 33%;
-    transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
+.content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: white; /* Color del texto, ajusta según el fondo */
+    color: white;
     font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 
 .btn {
-    
     border: 2px solid white;
     color: white;
     background-color: transparent;
@@ -97,7 +92,6 @@ h3 {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/*nosotros*/
 .nosotros {
     padding: 20px;
     margin-top: 40px;
@@ -110,82 +104,120 @@ h3 {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    gap: 20px; /* Espacio entre las columnas */
-    align-items: center; /* Alinea verticalmente los elementos */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
 }
+
 .text-container {
     padding: 20px;
     color: #000;
 }
 
-
 .img-container img {
-    width: 100%; /* Ajusta la imagen para que ocupe todo el ancho de su contenedor */
+    width: 100%;
     max-width: 400px;
     height: auto;
     padding: 20px;
     margin-left: 15%;
 }
 
-/* Estilos menu*/
-.titulo-menu {
+.menu-title {
     text-align: center;
-    margin-bottom: 60px;
-    color: #f46e20;
 }
-.productos {
-    list-style: none;
-    padding: 0;
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    margin: auto; /* Centra el contenedor */
+}
+
+.item {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card {
-    border: 3px solid #f46e20;
-    border-radius: 10px;
-    overflow: hidden;
+    flex-direction: column;
+    background-color: #e69a23;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
-    max-width: 300px;
-    /* background-color: #f46e20; */
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
 }
 
-.card-img {
-    width: 100%;
-    height: auto;
-   
-}
-
-.card-content {
-    padding: 15px;
-    background-color: #f46e20;
-}
-
-.card-title {
-    font-size: 1.5em;
-    margin: 0 0 10px;
-    color: #000;
-}
-
-
-.card-price {
-    font-size: 1.2em;
-    color: #000;
+.producto-nombre {
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
-/* Estilo del pie de página */
+.item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 100%; /* Puedes ajustar esta altura según sea necesario */
+}
+
+.producto {
+    /* Tamaño mínimo en altura */
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+  
+}
+
+.ingredientes {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    display: none; /* Inicialmente oculto */
+}
+
+.producto-precio {
+    font-size: 1rem;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.ver-ingredientes, .ordenar {
+    padding: 3px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    flex: 1; /* Ocupa espacio disponible igualmente */
+}
+
+.ver-ingredientes:hover, .ordenar:hover {
+    background-color: #555;
+}
+
+.item-container.rotar .producto {
+    transform: rotateY(180deg);
+}
+
+.item-container.rotar .ingredientes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(360deg);
+}
+
 footer {
     background-color: #f46e20;
     color: black;
     text-align: center;
     padding: 1em 0;
     margin-top: 20px;
-    position: relative;
     width: 100%;
     bottom: 0;
 }

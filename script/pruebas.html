@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Ingredientes</title>
+    <style>
+        .ingredientes {
+            display: none;
+            transition: transform 0.3s;
+        }
+        .ingredientes.rotar {
+            display: block;
+            transform: rotateX(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <div class="item-container">
+            <img src="img/Pulled Pork/pulled-pork-B.jpg" alt="Pulled Pork" class="producto">
+            <div class="ingredientes">Ingredientes: Tomate, Queso, Pepperoni</div>
+        </div>
+        <span>BBQ Pulled Pork</span>
+        <button class="ver-ingredientes">Ver Ingredientes</button>
+    </div>
+
+    <script>
+        document.querySelectorAll('.ver-ingredientes').forEach(button => {
+            button.addEventListener('click', function() {
+                const itemContainer = this.closest('.item').querySelector('.ingredientes');
+                itemContainer.classList.toggle('rotar');
+            });
+        });
+    </script>
+</body>
+</html>
