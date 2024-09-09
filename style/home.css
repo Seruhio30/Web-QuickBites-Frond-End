@@ -24,7 +24,7 @@ h3 {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(243, 170, 53, 0.403);
+    /* background-color: rgba(243, 170, 53, 0.403); */
     color: #333;
     z-index: 1000;
     transition: background-color 0.3s, color 0.3s;
@@ -45,6 +45,17 @@ h3 {
 }
 
 .nav a {
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #333; /* Cambia el color de fondo al pasar el cursor */
+    color: #fff; /* Cambia el color del texto al pasar el cursor */
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+ 
+}
+
+.nav a {
     margin: 0 15px;
     text-decoration: none;
     color: inherit;
@@ -54,19 +65,23 @@ h3 {
 
 .hamb {
     color: #e69a23;
+    
     font-size: 40px;
     display: none;
 }
 
+.hero {
+    /* background-color: #e69a23; */
+    background-color: #EAA83E;
+    padding: 60px;
+}
+
 .banner {
     position: relative;
-    width: 100%;
-    max-width: 1350px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 300px; 
+    width: 55%;
 }
+
 
 .content {
     position: absolute;
@@ -137,8 +152,9 @@ h3 {
 .item {
     display: flex;
     flex-direction: column;
-    background-color: #e69a23;
-    border: 1px solid #ddd;
+    background-color: #EAA83E;
+    /* border: 1px solid #ddd; */
+    border: 6px solid orangered;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -146,71 +162,98 @@ h3 {
     padding: 20px;
 }
 
-.producto-nombre {
-    font-weight: bold;
-    font-size: 1.2rem;
+.item-container {
+    perspective: 1000px; /* Necesario para la rotación en 3D */
 }
 
-.item-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.producto-imagen-container {
     position: relative;
     width: 100%;
-    max-width: 300px;
-    height: 100%; /* Puedes ajustar esta altura según sea necesario */
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
 }
 
-.producto {
-    /* Tamaño mínimo en altura */
-    width: 250px;
-    height: 300px;
-    object-fit: cover;
-  
+.producto-nombre {
+    font-size: 18;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.producto-imagen {
+    width: 180px;
+    height: 150px;
+    backface-visibility: hidden; /* Oculta la imagen cuando gira */
 }
 
 .ingredientes {
-    background-color: #f9f9f9;
-    padding: 10px;
-    text-align: left;
-    font-size: 14px;
-    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg); /* Inicialmente no visible */
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.6s;
 }
 
-.producto-precio {
-    font-size: 1rem;
+.ingredientes ul {
+    margin: 0;  /* Elimina el margen por defecto del ul */
+    padding: 0; /* Elimina el padding por defecto del ul */
+    text-align: left; /* Alinea el texto de los elementos de la lista a la izquierda */
+}
+
+.producto-imagen-container.rotated {
+    transform: rotateY(180deg);
+}
+
+.producto-imagen-container.rotated .ingredientes {
+    opacity: 1; /* Se vuelve visible al girar */
+}
+
+.ordenar {
+    background-color: #ffffffad; /* Sin fondo para el botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor tipo mano */
+    padding: 5px; /* Espaciado */
+}
+
+.ordenar svg {
+    width: 35px; /* Ancho del ícono */
+    height: 35px; /* Altura del ícono */
+    fill: #333; /* Color del ícono */
+    transition: transform 0.2s ease, fill 0.2s ease; /* Transición suave */
+}
+
+.ordenar:hover svg {
+    transform: scale(1.3); /* Aumenta el tamaño al pasar el cursor */
+    fill: #555; /* Cambia el color del ícono al pasar el cursor */
+}
+
+
+.item-container.rotar .producto {
+    transform: rotateY(180deg); /* Rotación de 180 grados */
+}
+
+.item-container.rotar .ingredientes {
+    opacity: 1; /* Mostrar los ingredientes cuando la rotación esté activa */
+    transform: rotateY(0deg); /* Mostrar los ingredientes correctamente */
 }
 
 .item-actions {
     display: flex;
-    justify-content: space-between; /* Espacio entre los botones */
-    gap: 10px; /* Espacio entre los botones */
+    justify-content: space-between; /* Espacia los botones dentro del contenedor */
+    gap: 10px; /* Ajusta el valor para controlar el espacio entre los botones */
 }
 
-.ver-ingredientes, .ordenar {
-    padding: 3px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    flex: 1; /* Ocupa espacio disponible igualmente */
-}
 
-.ver-ingredientes:hover, .ordenar:hover {
-    background-color: #555;
-}
-
-.item-container.rotar .producto {
-    transform: rotateY(180deg);
-}
-
-.item-container.rotar .ingredientes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotateY(360deg);
-}
 
 footer {
     background-color: #f46e20;

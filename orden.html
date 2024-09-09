@@ -5,38 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ordenar Producto</title>
     <link rel="stylesheet" href="style/order.css">
-   
 </head>
 <body>
     <header>
-        <h1>Ordena tu Producto</h1>
+        <h1>Quick Bites</h1>
     </header>
 
     <main>
         <div id="producto-detalle">
-            <img id="producto-imagen" src="" alt="Producto">
+            <div class="img-container">
+                <img id="producto-imagen" class="imagen-producto" src="" alt="Producto">
+            </div>
             <h2 id="producto-nombre"></h2>
-            <p id="producto-descripcion">Descripción del producto aquí.</p>
-            <p>Precio: $<span id="producto-precio"></span></p>
-            <p>Cantidad: <span id="producto-cantidad">
-                <label>Cantidad: <input type="number" id="cantidad" min="1" value="1"></label>
-
-            </span></p>
+            <p>Precio: ¢<span id="producto-precio"></span></p>
         </div>
 
         <div id="adicionales">
             <h3>Adicionales</h3>
             <div class="adicional-item">
-                <span>Queso extra</span>
-                <input type="number" min="0" value="0" data-price="1.5">
-                <span></span>
+                <label>
+                    <input type="checkbox" class="adicional-checkbox" data-price="1500">
+                    Queso extra - ¢1500
+                </label>
             </div>
             <div class="adicional-item">
-                <span>Jalapeños</span>
-                <input type="number" min="0" value="0" data-price="1">
-                <span></span>
+                <label>
+                    <input type="checkbox" class="adicional-checkbox" data-price="300">
+                    Jalapeños - ¢300
+                </label>
             </div>
-            <!-- Agrega más adicionales aquí -->
+            <div class="adicional-item">
+                <label>
+                    <input type="checkbox" class="adicional-checkbox" data-price="1000">
+                    Papas - ¢1000
+                </label>
+            </div>
         </div>
 
         <div id="opciones-envio">
@@ -49,14 +52,17 @@
             </div>
         </div>
 
-        <p>Total: $<span id="total-pedido">0</span></p>
         <button id="agregar-mas">Agregar más productos</button>
+
+        <section id="resumen-pedido">
+            <h2>Tu Pedido</h2>
+            <div id="productos-seleccionados"></div>
+            <div id="total-pedido">Total: ¢0</div>
+        </section>
+        
         <button id="realizar-pedido">Confirmar Pedido</button>
-       
-
-
     </main>
 
-    <script src="script/ordenar.js"></script>
+    <script src="script/ordenar.js" defer></script>
 </body>
 </html>

@@ -1,36 +1,192 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de Ingredientes</title>
+    <title>Test LocalStorage</title>
     <style>
-        .ingredientes {
-            display: none;
-            transition: transform 0.3s;
+        /* Estilos básicos para la prueba */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-        .ingredientes.rotar {
-            display: block;
-            transform: rotateX(360deg);
+        .product-info, .product-actions {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="item">
-        <div class="item-container">
-            <img src="img/Pulled Pork/pulled-pork-B.jpg" alt="Pulled Pork" class="producto">
-            <div class="ingredientes">Ingredientes: Tomate, Queso, Pepperoni</div>
+    <h1>Test LocalStorage</h1>
+    
+    <!-- Sección para mostrar información del producto -->
+    <div class="product-info">
+        <p><strong>Nombre del Producto:</strong> <span id="producto-nombre">Producto A</span></p>
+        <p><strong>Imagen:</strong> <img id="producto-imagen" src="https://via.placeholder.com/150" alt="Imagen del producto" width="150" /></p>
+        <p><strong>Precio:</strong> <span id="producto-precio">100</span></p>
+    </div>
+
+    <!-- Sección para seleccionar cantidad y adicionales -->
+    <div class="product-actions">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" />
+        <div>
+            <label><input type="checkbox" class="adicional-checkbox" data-price="10" /> Adicional 1 (¢10)</label>
+            <label><input type="checkbox" class="adicional-checkbox" data-price="20" /> Adicional 2 (¢20)</label>
         </div>
-        <span>BBQ Pulled Pork</span>
-        <button class="ver-ingredientes">Ver Ingredientes</button>
+        <button id="agregar-mas">Agregar al Pedido</button>
+    </div>
+    
+    <!-- Sección para mostrar productos seleccionados y el total -->
+    <div class="product-list">
+        <h2>Productos Seleccionados</h2>
+        <ul id="lista-productos"></ul>
+        <p id="total-pedido">Total: ¢0</p>
+    </div>
+
+    <!-- Sección para confirmar el pedido -->
+    <div class="order-form">
+        <h2>Confirmar Pedido</h2>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" />
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" />
+        <div>
+            <label><input type="radio" name="envio" value="normal" /> Envío Normal</label>
+            <label><input type="radio" name="envio" value="express" /> Envío Express</label>
+        </div>
+        <button id="realizar-pedido">Realizar Pedido</button>
     </div>
 
     <script>
-        document.querySelectorAll('.ver-ingredientes').forEach(button => {
-            button.addEventListener('click', function() {
-                const itemContainer = this.closest('.item').querySelector('.ingredientes');
-                itemContainer.classList.toggle('rotar');
+        document.addEventListener('DOMContentLoaded', function() {
+            const productoNombre = document.getElementById('producto-nombre');
+            const productoImagen = document.getElementById('producto-imagen');
+            const productoPrecio = document.getElementById('producto-precio');
+            const totalPedido = document.getElementById('total-pedido');
+            const cantidadInput = document.getElementById('cantidad');
+            const adicionalesCheckboxes = document.querySelectorAll('.adicional-checkbox');
+            const listaProductos = document.getElementById('lista-productos');
+
+            // Función para cargar datos del producto desde la URL
+            function cargarDatosProducto() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const producto = urlParams.get('producto');
+                const precio = urlParams.get('precio');
+                const imagen = urlParams.get('imagen');
+
+                if (producto && precio && imagen) {
+                    productoNombre.textContent = producto;
+                    productoPrecio.textContent = precio;
+                    productoImagen.src = imagen;
+                }
+            }
+
+            // Función para calcular y mostrar el total acumulado del pedido
+            function calcularTotal() {
+                let totalGlobal = 0;
+                const datosPedido = JSON.parse(localStorage.getItem('pedido')) || [];
+
+                datosPedido.forEach(producto => {
+                    let totalAdicionales = producto.adicionales.reduce((sum, add) => sum + parseFloat(add), 0);
+                    totalGlobal += (parseFloat(producto.precio) + totalAdicionales) * producto.cantidad;
+                });
+
+                totalPedido.textContent = `Total: ¢${totalGlobal}`;
+            }
+
+            // Función para actualizar la lista de productos seleccionados en la página
+            function actualizarListaProductos() {
+                const datosPedido = JSON.parse(localStorage.getItem('pedido')) || [];
+                listaProductos.innerHTML = ''; // Limpiar la lista antes de actualizar
+
+                datosPedido.forEach(producto => {
+                    const li = document.createElement('li');
+                    li.textContent = `${producto.nombre} - Cantidad: ${producto.cantidad}`;
+                    listaProductos.appendChild(li);
+                });
+            }
+
+            // Manejar cambios en cantidad o adicionales para recalcular el total
+            cantidadInput.addEventListener('input', calcularTotal);
+            adicionalesCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', calcularTotal);
             });
+
+            // Guardar datos del pedido en localStorage y actualizar la lista de productos
+            document.getElementById('agregar-mas').addEventListener('click', function() {
+                const producto = productoNombre.textContent;
+                const cantidad = parseInt(cantidadInput.value, 10);
+                const adicionales = Array.from(adicionalesCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.dataset.price);
+
+                if (producto && !isNaN(cantidad)) {
+                    let datosPedido = JSON.parse(localStorage.getItem('pedido')) || [];
+
+                    datosPedido.push({
+                        nombre: producto,
+                        cantidad: cantidad,
+                        adicionales: adicionales,
+                        precio: productoPrecio.textContent
+                    });
+
+                    localStorage.setItem('pedido', JSON.stringify(datosPedido));
+                    actualizarListaProductos(); // Actualizar la lista de productos seleccionados
+                    calcularTotal(); // Recalcular el total después de agregar el producto
+
+                    // Limpiar campos
+                    cantidadInput.value = ''; // Limpiar el campo de cantidad
+                    adicionalesCheckboxes.forEach(checkbox => checkbox.checked = false); // Desmarcar los adicionales
+                }
+            });
+
+            // Confirmar pedido y mostrar detalles
+            document.getElementById('realizar-pedido').addEventListener('click', function() {
+                enviarPedido();
+            });
+
+            function enviarPedido() {
+                const datosPedido = JSON.parse(localStorage.getItem('pedido')) || [];
+                console.log('Datos del pedido antes de enviar:', datosPedido);
+
+                const pedidoData = {
+                    productos: datosPedido,
+                    direccion: document.getElementById('direccion').value,
+                    telefono: document.getElementById('telefono').value,
+                    envio: document.querySelector('input[name="envio"]:checked').value
+                };
+
+                fetch('http://localhost:8080/api/pedidos', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(pedidoData),
+                    credentials: 'include'
+                })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    alert('Pedido enviado con éxito.');
+
+                    // Limpiar el localStorage después de enviar el pedido
+                    localStorage.removeItem('pedido');
+                    console.log('LocalStorage después de enviar:', localStorage.getItem('pedido'));
+
+                    // Redirigir a la página principal después de un corto retraso
+                    setTimeout(function() {
+                        window.location.href = 'index.html';
+                    }, 500);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al enviar el pedido.');
+                });
+            }
+
+            cargarDatosProducto();
+            calcularTotal(); // Mostrar el total al cargar la página
+            actualizarListaProductos(); // Mostrar la lista de productos seleccionados al cargar la página
         });
     </script>
 </body>

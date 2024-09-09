@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick-Bite-Home</title>
+    <title>Quick Bites</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..
-    900&family=Open+Sans:ital@0;1&family=Poppins:wght@300;400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital@0;1&family=Poppins:wght@300;400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/home.css">
-    <link rel="stylesheet" href="style/option.css">
-  
-    
 </head>
 <body>
     <header class="header">
         <div class="container">
-            
             <a href="index.html">
-                <img src="img/QuickBiteslogo.png" alt="Quick Bites Logo"class="logo">
+                <img src="img/QuickBiteslogo.png" alt="Quick Bites Logo" class="logo">
             </a>
             <nav class="nav">
                 <a href="#banner">Inicio</a>
@@ -29,9 +24,10 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="hero" id="banner">
-            <img src="img/Pulled Pork/hero.webp" alt="Banner" class="banner">
+            <img src="img/hero-robo.png" alt="Banner" class="banner">
             <div class="content">
                 <h1>Quick Bites</h1>
                 <h3>Fast Food</h3>
@@ -43,213 +39,227 @@
             <div class="nos">
                 <h1>Quick Bites</h1>
             </div>
-           
             <div class="grid-container">
-                
                 <div class="text-container">
                     <h4>Quick Bites</h4>
                     <h1>Deliciosa Comida Rapida Para Llevar</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Explicabo assumenda numquam quod qui itaque, perferendis dolores dolore, 
-                        recusandae harum pariatur officiis at nulla quibusdam iusto sint, ratione nisi saepe.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo assumenda numquam quod qui itaque, perferendis dolores dolore, recusandae harum pariatur officiis at nulla quibusdam iusto sint, ratione nisi saepe.</p>
                 </div>
                 <div class="img-container">
                     <img src="img/convert_from_jpg_fb0d46ac3b07fa7a20e31c28b3072ee4_66bd79d4e9c92.webp" alt="">
                 </div>
             </div>
-
         </section>
 
         <section class="menu" id="menu">
-
-            <h2 class="menu-title">Menu</h2>
+            <h2 class="menu-title">Menú</h2>
             <div class="menu-container">
+                <!-- Pulled Pork Burger -->
                 <div class="item">
-                    <div class="producto-nombre">Pulled Pork</div>
+                    <div class="producto-nombre">Pulled Pork Burger</div>
                     <div class="item-container">
-                        <img class="producto" src="img/Pulled Pork/pulledPorkQB-B.jpg" alt="Pulled Pork">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>Pan Brioche Artesanal</li>
-                                <li>ColesKaw</li>
-                                <li>Pulled Pork BBQ</li>
-                                <li>Mayonesa de la casa</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/Pulled Pork/pulled-pork-B.jpg" alt="Pulled Pork Burger">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>Pan Brioche Artesanal</li>
+                                    <li>Coleslaw</li>
+                                    <li>Pulled Pork BBQ</li>
+                                    <li>Mayonesa de la casa</li>
+                                    <li>Papas Fritas</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="producto-precio">Precio: ¢6000</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="Pulled Pork Burger" data-precio="6000" data-imagen="img/Pulled Pork/pulled-pork-B.jpg">Ordenar</button>
                     </div>
                 </div>
 
+                <!-- Chicken Delight Burger -->
                 <div class="item">
-                    <div class="producto-nombre">Chicken Deligth Burguer</div>
+                    <div class="producto-nombre">Chicken Delight Burger</div>
                     <div class="item-container">
-                        <img class="producto" src="img/chikenBurger-fondo-orange.jpeg" alt="Chiken Deligth">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>Pan Brioche</li>
-                                <li>Pechuaga Pollo Empanizada</li>
-                                <li>Queso Mozzarella</li>
-                                <li>Cebolla-Lechuga-Tomate</li>
-                                <li>Mayonesa de la casa</li>
-                                <li>Papas Fritas</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/chikenBurger-fondo-orange.jpeg" alt="Chicken Delight Burger">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>Pan Brioche</li>
+                                    <li>Pechuga de Pollo Empanizada</li>
+                                    <li>Queso Mozzarella</li>
+                                    <li>Cebolla, Lechuga, Tomate</li>
+                                    <li>Mayonesa de la casa</li>
+                                    <li>Papas Fritas</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="producto-precio">Precio:¢5000</div>
+                    <div class="producto-precio">Precio: ¢5000</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="Chicken Delight Burger" data-precio="5000" data-imagen="img/chikenBurger-fondo-orange.jpeg">Ordenar</button>
                     </div>
                 </div>
 
+                <!-- Western Burger -->
                 <div class="item">
-                    <div class="producto-nombre">Western Burguer</div>
+                    <div class="producto-nombre">Western Burger</div>
                     <div class="item-container">
-                        <img class="producto" src="img/western-orange.jpeg" alt="Western Burguer">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>Pan Brioche</li>
-                                <li>1/4 Libra Carne</li>
-                                <li>Tocineta</li>
-                                <li>Aros de Cebolla</li>
-                                <li>salsa BBQ</li>
-                                <li>Lechuga-Tomate</li>
-                                <li>Papas Fritas</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/western-orange.jpeg" alt="Western Burger">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>Pan Brioche</li>
+                                    <li>1/4 Libra de Carne</li>
+                                    <li>Tocineta</li>
+                                    <li>Aros de Cebolla</li>
+                                    <li>Salsa BBQ</li>
+                                    <li>Lechuga, Tomate</li>
+                                    <li>Papas Fritas</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="producto-precio">Precio:¢5000</div>
+                    <div class="producto-precio">Precio: ¢5500</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="Western Burger" data-precio="5500" data-imagen="img/western-orange.jpeg">Ordenar</button>
                     </div>
                 </div>
 
+                <!-- QB Special -->
                 <div class="item">
                     <div class="producto-nombre">QB Special</div>
                     <div class="item-container">
-                        <img class="producto" src="img/QB Special-orange.jpg" alt="QB Special">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>Pan Brioche</li>
-                                <li>1/4 Libra de carne</li>
-                                <li>Queso mozzarella</li>
-                                <li>Cebolla-Tomate-Lechuga</li>
-                                <li>Aderezo Especial</li>
-                                <li>Pepinillos</li>
-                                <li>Papas Fritas</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/QB Special-orange.jpg" alt="QB Special">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>Pan Brioche</li>
+                                    <li>1/4 Libra de Carne</li>
+                                    <li>Queso Mozzarella</li>
+                                    <li>Cebolla, Tomate, Lechuga</li>
+                                    <li>Aderezo Especial</li>
+                                    <li>Pepinillos</li>
+                                    <li>Papas Fritas</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="producto-precio">Precio:¢5000</div>
+                    <div class="producto-precio">Precio: ¢4500</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="QB Special" data-precio="4500" data-imagen="img/QB Special-orange.jpg">Ordenar</button>
                     </div>
                 </div>
 
+                <!-- Birria Bites -->
                 <div class="item">
                     <div class="producto-nombre">Birria Bites</div>
                     <div class="item-container">
-                        <img class="producto" src="img/birria/birria-arrriba.jpg" alt="Birria Bites">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>Tortilla Palmeada</li>
-                                <li>Carne Birria</li>
-                                <li>Pico de Gallo</li>
-                                <li>Queso</li>
-                                <li>Salsa Especial</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/birria/birria-arrriba.jpg" alt="Birria Bites">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>Tortilla Palmeada</li>
+                                    <li>Carne Birria</li>
+                                    <li>Pico de Gallo</li>
+                                    <li>Queso</li>
+                                    <li>Salsa Especial</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="producto-precio">Precio:¢6500</div>
+                    <div class="producto-precio">Precio: ¢6500</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="Birria Bites" data-precio="6500" data-imagen="img/birria/birria-arrriba.jpg">Ordenar</button>
                     </div>
                 </div>
 
+                <!-- Alitas BBQ -->
                 <div class="item">
                     <div class="producto-nombre">Alitas BBQ</div>
                     <div class="item-container">
-                        <img class="producto" src="img/alitasBBQ-fondo-orange.png" alt="Alitas BBQ">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>6 Alitas y muslito</li>
-                                <li>Salsa BBQ-Bites</li>
-                                <li>Apio</li>
-                                <li>Zanahoria</li>
-                                <li>Salsa Ranch</li>
-                                <li>Adicional Papas (¢1000)</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/alitasBBQ-fondo-orange.png" alt="Alitas BBQ">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>6 Alitas y muslito</li>
+                                    <li>Salsa BBQ-Bites</li>
+                                    <li>Apio</li>
+                                    <li>Zanahoria</li>
+                                    <li>Salsa Ranch</li>
+                                    <li>Adicional Papas (¢1000)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="producto-precio">Precio:¢6000</div>
+                    <div class="producto-precio">Precio: ¢6000</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="Alitas BBQ" data-precio="6000" data-imagen="img/alitasBBQ-fondo-orange.png">Ordenar</button>
                     </div>
                 </div>
 
+                <!-- Alitas Buffalo -->
                 <div class="item">
                     <div class="producto-nombre">Alitas Buffalo</div>
                     <div class="item-container">
-                        <img class="producto" src="img/alitasBUFALO.jpeg" alt="Alitas Buffalo">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>6 Alitas y muslito</li>
-                                <li>Salsa Buffalo</li>
-                                <li>Apio</li>
-                                <li>Zanahoria</li>
-                                <li>Salsa Ranch</li>
-                                <li>Adicional Papas (¢1000)</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/alitasBUFALO.jpeg" alt="Alitas Buffalo">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>6 Alitas y muslito</li>
+                                    <li>Salsa Buffalo</li>
+                                    <li>Apio</li>
+                                    <li>Zanahoria</li>
+                                    <li>Salsa Ranch</li>
+                                    <li>Adicional Papas (¢1000)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="producto-precio">Precio:¢6000</div>
+                    <div class="producto-precio">Precio: ¢6000</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="Alitas Buffalo" data-precio="6000" data-imagen="img/alitasBUFALO.jpeg">Ordenar</button>
                     </div>
                 </div>
 
+                <!-- Bites Chicken Bowl -->
                 <div class="item">
                     <div class="producto-nombre">Bites Chicken Bowl</div>
                     <div class="item-container">
-                        <img class="producto" src="img/bowl-pollo-orange.jpeg" alt="Bites Chicken Bowl">
-                        <div class="ingredientes">
-                            <ul>
-                                <li>Pechugitas de Pollo</li>
-                                <li>Salsa special-Bites</li>
-                                <li>salteado de Verduras</li>
-                                <li>Arroz</li>
-                            </ul>
+                        <div class="producto-imagen-container">
+                            <img class="producto-imagen" src="img/bowl-pollo-orange.jpeg" alt="Bites Chicken Bowl">
+                            <div class="ingredientes">
+                                <ul>
+                                    <li>Pechugitas de Pollo</li>
+                                    <li>Salsa Special-Bites</li>
+                                    <li>Salteado de Verduras</li>
+                                    <li>Arroz</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="producto-precio">Precio:¢6000</div>
+                    <div class="producto-precio">Precio: ¢6000</div>
                     <div class="item-actions">
                         <button class="ver-ingredientes">Ver Ingredientes</button>
-                        <button class="ordenar">Ordenar</button>
+                        <button class="ordenar" data-producto="Bites Chicken Bowl" data-precio="6000" data-imagen="img/bowl-pollo-orange.jpeg">Ordenar</button>
                     </div>
                 </div>
             </div>
-            
-                
-               
-
-            
         </section>
     </main>
-           
+    
     <footer>
         <p>&copy; 2024 Quick Bites. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script/home.js" defer></script>
+ 
 </body>
 </html>

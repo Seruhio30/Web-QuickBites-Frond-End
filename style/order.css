@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    background-color: #f46e20;
+    background-color: #EAA83E;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -21,22 +21,35 @@ main {
 }
 
 h1, h2, h3 {
-    color: yellow;
+    color: #091625;
 }
 
 #producto-detalle, #adicionales, #opciones-envio {
     margin-bottom: 20px;
+    
 }
 
-#producto-detalle img {
+#producto-detalle {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 15px;
+  
+}
+.img-container{
+    width: 200px;
+   
 }
 
+
+
+#producto-imagen {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto;    /* Mantiene la proporción de la imagen */
+}
+
+
 #producto-precio, #total-pedido, .adicional-item span:last-child {
-    color: #e69a23;
+    color: #091625;
     font-weight: bold;
 }
 
