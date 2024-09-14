@@ -37,12 +37,14 @@ h1, h2, h3 {
 }
 .img-container{
     width: 200px;
+    height: 200px;
    
 }
 
 
 
-#producto-imagen {
+.imagen-producto {
+    
     max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
     height: auto;    /* Mantiene la proporción de la imagen */
 }
@@ -80,4 +82,52 @@ button {
 
 button:hover {
     background-color: #f46e20;
+}
+
+/* CSS para alinear los productos, adicionales y envío */
+/* .producto-item, .adicional-item, .envio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+} */
+
+.producto-item, .adicional-item, .envio-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.producto-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+
+.producto-detalle {
+    display: flex;
+    align-items: center;
+}
+
+/* .producto-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+} */
+
+.producto-nombre, .adicional-texto {
+    flex-grow: 1;
+}
+
+.producto-precio, .adicional-precio {
+    font-weight: bold;
+}
+
+/* Separar el total en negrita y más grande */
+#total-pedido {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
 }

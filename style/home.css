@@ -183,7 +183,6 @@ h3 {
 .producto-imagen {
     width: 180px;
     height: 150px;
-    backface-visibility: hidden; /* Oculta la imagen cuando gira */
 }
 
 .ingredientes {
@@ -191,16 +190,16 @@ h3 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transform: rotateY(180deg); /* Inicialmente no visible */
+    height: 195px;
+    max-height: 190px; /* Ajusta el valor según tus necesidades */
+    overflow-y: auto; /* Activa el scroll si la lista es más larga que 150px */
+    padding-right: 10px; /* Añade espacio para que el scroll no sobrepase el contenido */
     display: flex;
     justify-content: flex-start; 
     align-items: center;
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
-    opacity: 0; /* Inicialmente invisible */
     transition: opacity 0.6s;
 }
 
@@ -211,12 +210,19 @@ h3 {
 }
 
 .producto-imagen-container.rotated {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Gira la imagen */
+}
+
+.producto-imagen-container .ingredientes {
+    opacity: 0; /* Inicialmente invisible */
+    transform: rotateY(180deg); /* Los ingredientes están detrás inicialmente */
 }
 
 .producto-imagen-container.rotated .ingredientes {
-    opacity: 1; /* Se vuelve visible al girar */
+    opacity: 1; /* Se vuelve visible cuando el contenedor rota */
+     /* Pone los ingredientes visibles al frente */
 }
+
 
 .ordenar {
     background-color: #ffffffad; /* Sin fondo para el botón */
@@ -238,14 +244,7 @@ h3 {
 }
 
 
-.item-container.rotar .producto {
-    transform: rotateY(180deg); /* Rotación de 180 grados */
-}
 
-.item-container.rotar .ingredientes {
-    opacity: 1; /* Mostrar los ingredientes cuando la rotación esté activa */
-    transform: rotateY(0deg); /* Mostrar los ingredientes correctamente */
-}
 
 .item-actions {
     display: flex;
