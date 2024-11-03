@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="whatsapp-order-form">
+        <label for="customerName">Nombre del Cliente:</label>
+        <input type="text" id="customerName" name="customerName" required>
+    
+        <label for="product">Producto:</label>
+        <select id="product" name="product">
+            <!-- Aquí se llenarán los productos desde la base de datos -->
+        </select>
+    
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+    
+        <label for="price">Precio:</label>
+        <input type="text" id="price" name="price" required>
+    
+        <label for="status">Estado del Pedido:</label>
+        <select id="status" name="status">
+            <option value="En preparación">En preparación</option>
+            <option value="Listo para entrega">Listo para entrega</option>
+            <option value="Completado">Completado</option>
+        </select>
+    
+        <button type="submit">Registrar Pedido</button>
+    </form>
+    <script src="script/whatsappPedidos.js"></script>
+</body>
+</html>
