@@ -38,7 +38,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital@0;1&family=Poppins:wght@300;400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 
 <body>
@@ -47,14 +51,16 @@
             <a href="index.html">
                 <img src="img/QuickBiteslogo.png" alt="Quick Bites Logo" class="logo">
             </a>
-            <nav class="nav">
-                <a href="#banner">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#menu">Menú</a>
-                <a href="pedidos.html">Pedidos</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
         </div>
+        <button id="hamburger" class="hamburger" aria-label="Toggle-navigation"></button>
+        <nav class="nav" id="nav-bar">
+            <a href="#banner">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#menu">Menú</a>
+            <a href="pedidos.html">Pedidos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
     </header>
 
     <main>
@@ -95,12 +101,8 @@
     <footer>
         <p>&copy; 2024 Quick Bites. Todos los derechos reservados.</p>
     </footer>
-    <script src="scripts/home.js" defer></script>
-    <script src="scripts/display-products.js" defer></script>
 
-    <script src="scripts/ordenar.js" defer></script>
-
-
+    <script type="module" src="scripts/main.js"></script>
 </body>
 
 </html>

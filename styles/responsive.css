@@ -1,102 +1,46 @@
-/* Estilos globales */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* background-color: rgba(243, 170, 53, 0.403); */
-    color: #333;
-    z-index: 1000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.logo {
-    width: 80px;
-    height: 80px;
-}
-
-.nav a {
-    transition: all 0.3s ease;
-}
-
-.nav a:hover {
-    background-color: #333;
-    /* Cambia el color de fondo al pasar el cursor */
-    color: #fff;
-    /* Cambia el color del texto al pasar el cursor */
-    transform: scale(1.1);
-    /* Aumenta el tamaño del botón */
-
-}
-
-.nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.hamb {
-    color: #e69a23;
-
-    font-size: 40px;
-    display: none;
-}
-
 .hero {
-    /* background-color: #e69a23; */
-    background-color: #EAA83E;
-    padding: 60px;
+     background-color: #EAA83E;
+    padding: 1.87rem;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* opcional para evitar desbordes */
 }
 
 .banner {
-    position: relative;
-    margin-left: 300px;
-    width: 55%;
+  width: 100%;
+  display: block;
 }
-
 
 .content {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-family: 'Montserrat', 'Poppins', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  z-index: 2;
+  max-width: 90%;
+  padding: 0 1rem;
 }
 
+.content h1 {
+  font-size: 1.2rem;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+}
+
+.content .btn {
+  font-size: 0.8rem;
+  padding: 0.5em 1.25em;
+}
+
+
 .btn {
+    
     border: 2px solid white;
     color: white;
     background-color: transparent;
@@ -283,12 +227,3 @@ header {
 
 
 
-footer {
-    background-color: #f46e20;
-    color: black;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 20px;
-    width: 100%;
-    bottom: 0;
-}

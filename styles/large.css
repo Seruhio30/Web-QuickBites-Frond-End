@@ -1,0 +1,11 @@
+@media (min-width: 64rem) {
+  .content {
+    top: 45%; /* más arriba si se ve muy bajo */
+  }
+
+  .banner {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
