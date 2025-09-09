@@ -20,7 +20,7 @@ h3 {
     margin: 0;
 }
 
-.header {
+header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -30,7 +30,7 @@ h3 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,10 +49,13 @@ h3 {
 }
 
 .nav a:hover {
-    background-color: #333; /* Cambia el color de fondo al pasar el cursor */
-    color: #fff; /* Cambia el color del texto al pasar el cursor */
-    transform: scale(1.1); /* Aumenta el tamaño del botón */
- 
+    background-color: #333;
+    /* Cambia el color de fondo al pasar el cursor */
+    color: #fff;
+    /* Cambia el color del texto al pasar el cursor */
+    transform: scale(1.1);
+    /* Aumenta el tamaño del botón */
+
 }
 
 .nav a {
@@ -65,7 +68,7 @@ h3 {
 
 .hamb {
     color: #e69a23;
-    
+
     font-size: 40px;
     display: none;
 }
@@ -78,7 +81,7 @@ h3 {
 
 .banner {
     position: relative;
-    margin-left: 300px; 
+    margin-left: 300px;
     width: 55%;
 }
 
@@ -143,10 +146,13 @@ h3 {
 
 .menu-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
-    gap: 20px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas de igual tamaño */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
     padding: 20px;
-    margin: auto; /* Centra el contenedor */
+    margin: auto;
+    /* Centra el contenedor */
 }
 
 .item {
@@ -163,7 +169,8 @@ h3 {
 }
 
 .item-container {
-    perspective: 1000px; /* Necesario para la rotación en 3D */
+    perspective: 1000px;
+    /* Necesario para la rotación en 3D */
 }
 
 .producto-imagen-container {
@@ -191,11 +198,14 @@ h3 {
     left: 0;
     width: 100%;
     height: 195px;
-    max-height: 190px; /* Ajusta el valor según tus necesidades */
-    overflow-y: auto; /* Activa el scroll si la lista es más larga que 150px */
-    padding-right: 10px; /* Añade espacio para que el scroll no sobrepase el contenido */
+    max-height: 190px;
+    /* Ajusta el valor según tus necesidades */
+    overflow-y: auto;
+    /* Activa el scroll si la lista es más larga que 150px */
+    padding-right: 10px;
+    /* Añade espacio para que el scroll no sobrepase el contenido */
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
     background-color: #fff;
     padding: 20px;
@@ -204,43 +214,60 @@ h3 {
 }
 
 .ingredientes ul {
-    margin: 0;  /* Elimina el margen por defecto del ul */
-    padding: 0; /* Elimina el padding por defecto del ul */
-    text-align: left; /* Alinea el texto de los elementos de la lista a la izquierda */
+    margin: 0;
+    /* Elimina el margen por defecto del ul */
+    padding: 0;
+    /* Elimina el padding por defecto del ul */
+    text-align: left;
+    /* Alinea el texto de los elementos de la lista a la izquierda */
 }
 
 .producto-imagen-container.rotated {
-    transform: rotateY(180deg); /* Gira la imagen */
+    transform: rotateY(180deg);
+    /* Gira la imagen */
 }
 
 .producto-imagen-container .ingredientes {
-    opacity: 0; /* Inicialmente invisible */
-    transform: rotateY(180deg); /* Los ingredientes están detrás inicialmente */
+    opacity: 0;
+    /* Inicialmente invisible */
+    transform: rotateY(180deg);
+    /* Los ingredientes están detrás inicialmente */
 }
 
 .producto-imagen-container.rotated .ingredientes {
-    opacity: 1; /* Se vuelve visible cuando el contenedor rota */
-     /* Pone los ingredientes visibles al frente */
+    opacity: 1;
+    /* Se vuelve visible cuando el contenedor rota */
+    /* Pone los ingredientes visibles al frente */
 }
 
 
 .ordenar {
-    background-color: #ffffffad; /* Sin fondo para el botón */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cursor tipo mano */
-    padding: 5px; /* Espaciado */
+    background-color: #ffffffad;
+    /* Sin fondo para el botón */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    /* Cursor tipo mano */
+    padding: 5px;
+    /* Espaciado */
 }
 
 .ordenar svg {
-    width: 35px; /* Ancho del ícono */
-    height: 35px; /* Altura del ícono */
-    fill: #333; /* Color del ícono */
-    transition: transform 0.2s ease, fill 0.2s ease; /* Transición suave */
+    width: 35px;
+    /* Ancho del ícono */
+    height: 35px;
+    /* Altura del ícono */
+    fill: #333;
+    /* Color del ícono */
+    transition: transform 0.2s ease, fill 0.2s ease;
+    /* Transición suave */
 }
 
 .ordenar:hover svg {
-    transform: scale(1.3); /* Aumenta el tamaño al pasar el cursor */
-    fill: #555; /* Cambia el color del ícono al pasar el cursor */
+    transform: scale(1.3);
+    /* Aumenta el tamaño al pasar el cursor */
+    fill: #555;
+    /* Cambia el color del ícono al pasar el cursor */
 }
 
 
@@ -248,8 +275,10 @@ h3 {
 
 .item-actions {
     display: flex;
-    justify-content: space-between; /* Espacia los botones dentro del contenedor */
-    gap: 10px; /* Ajusta el valor para controlar el espacio entre los botones */
+    justify-content: space-between;
+    /* Espacia los botones dentro del contenedor */
+    gap: 10px;
+    /* Ajusta el valor para controlar el espacio entre los botones */
 }
 
 
