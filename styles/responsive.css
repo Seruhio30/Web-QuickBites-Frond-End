@@ -1,48 +1,55 @@
+:root{
+    --primary-color-titulos: #f46e20;
+    --fondos:#EAA83E;
+    --btn: white;
+}
+
 .hero {
-     background-color: #EAA83E;
+    background-color: var(--fondos);
     padding: 1.87rem;
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden; /* opcional para evitar desbordes */
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    /* opcional para evitar desbordes */
 }
 
 .banner {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: rgba(255, 255, 255, 0.65);
-  font-family: 'Montserrat', 'Poppins', sans-serif;
-  z-index: 2;
-  max-width: 90%;
-  padding: 0 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    z-index: 2;
+    max-width: 90%;
+    padding: 0 1rem;
 }
 
 .content h1 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .content h3 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .content .btn {
-  font-size: 0.8rem;
-  padding: 0.5em 1.25em;
+    font-size: 0.8rem;
+    padding: 0.5em 1.25em;
 }
 
 
 .btn {
-    
-    border: 2px solid white;
-    color: white;
+
+    border: 2px solid var(--btn);
+    color: var(--btn);
     background-color: transparent;
     text-transform: uppercase;
     text-decoration: none;
@@ -54,34 +61,38 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/******************Section Nosotros**************************************/
+
 .nosotros {
     padding: 20px;
     margin-top: 40px;
 }
 
-.nos {
+.nosotros-titulo {
     text-align: center;
-    color: #f46e20;
+    color: var(--primary-color-titulos);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.nosotros-container {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     align-items: center;
 }
 
 .text-container {
+   
     padding: 20px;
     color: #000;
 }
 
 .img-container img {
+    
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     padding: 20px;
-    margin-left: 15%;
+    
 }
 
 .menu-title {
@@ -224,6 +235,3 @@
     gap: 10px;
     /* Ajusta el valor para controlar el espacio entre los botones */
 }
-
-
-

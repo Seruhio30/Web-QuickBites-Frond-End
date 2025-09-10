@@ -70,7 +70,7 @@ header {
 
 
 .nav a:hover {
-    background-color: #333;
+    background-color: #f46e20;
     /* Cambia el color de fondo al pasar el cursor */
     color: #fff;
     /* Cambia el color del texto al pasar el cursor */
@@ -87,7 +87,7 @@ header {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #e69a23;
+    color: #f46e20;
 }
 
 .hamburger::before {

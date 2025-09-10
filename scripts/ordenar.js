@@ -1,19 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var ordenarButtons = document.querySelectorAll(".ordenar");
 
-    ordenarButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var producto = {
-                nombre: button.getAttribute('data-producto'),
-                precio: button.getAttribute('data-precio'),
-                imagen: button.getAttribute('data-imagen')
-            };
+export function inicializarBotonesOrdenar() {
+  const botones = document.querySelectorAll('.ordenar');
 
-            var productosGuardados = JSON.parse(localStorage.getItem('productos')) || [];
-            productosGuardados.push(producto);
-            localStorage.setItem('productos', JSON.stringify(productosGuardados));
+  botones.forEach(button => {
+    button.addEventListener('click', () => {
+      const producto = {
+        nombre: button.dataset.producto,
+        precio: button.dataset.precio,
+        imagen: button.dataset.imagen
+      };
 
-            window.location.href = 'ordenar.html';
-        });
+      const productos = JSON.parse(localStorage.getItem('productos')) || [];
+      productos.push(producto);
+      localStorage.setItem('productos', JSON.stringify(productos));
+
+      window.location.href = 'ordenar.html';
     });
-});
+  });
+}

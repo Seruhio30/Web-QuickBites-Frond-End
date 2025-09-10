@@ -1,11 +1,29 @@
 @media (min-width: 64rem) {
   .content {
-    top: 45%; /* más arriba si se ve muy bajo */
+    top: 45%;
+    /* más arriba si se ve muy bajo */
   }
 
   .banner {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+  }
+
+  /***************nosotros*****************************/
+  .nosotros-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+
+  .img-container img {
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    margin-left: 15%;
   }
 }
