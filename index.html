@@ -20,7 +20,6 @@
 
     <!-- Seguridad básica -->
 
-
     <!-- Tema para móviles -->
     <meta name="theme-color" content="#0d6efd">
 
@@ -38,7 +37,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital@0;1&family=Poppins:wght@300;400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/medium.css">
@@ -65,13 +64,14 @@
 
     <main>
         <section class="hero" id="banner">
-            <img src="img/hero-robo.png" alt="Banner" class="banner">
+            <img src="img/img/WesternBurguer-QB.jpeg" alt="Banner" class="banner">
             <div class="content">
-                <h1>Quick Bites</h1>
-                <h3>Fast Food</h3>
+                <h1 id="hero-title">Quick Bites</h1>
+                <h3 id="hero-subtitle">Fast Food</h3>
                 <a href="#menu" class="btn">Ordenar</a>
             </div>
         </section>
+
 
         <section class="nosotros" id="nosotros">
             <div class="nosotros-titulo">
@@ -91,11 +91,49 @@
             </div>
         </section>
 
-        <section class="menu" id="menu">
-            <h2 class="menu-title">Menú</h2>
-            <div id="product-menu">
-                <!-- Aquí se insertarán los productos dinámicamente -->
+        <section id="menu">
+            <h2>Nuestro Menú</h2>
+
+            <!-- Botones de categorías -->
+            <div id="filtros" class="filtros">
+                <button data-categoria="todos" class="activo">Todos</button>
+                <button data-categoria="hamburguesas">Hamburguesas</button>
+                <button data-categoria="pollo">Pollo</button>
+                <button data-categoria="tacos">Tacos</button>
             </div>
+
+            <!-- Contenedor de productos -->
+            <div id="product-menu" class="product-menu"></div>
+        </section>
+
+        <!-- Sección Carrito -->
+        <section class="carrito" id="carrito">
+            <h2>Tu Pedido</h2>
+            <div class="cart-items">
+                <!-- Productos añadidos -->
+            </div>
+            
+            <div class="cart-summary">
+                <label for="tipo-entrega">¿Cómo deseas recibir tu pedido?</label>
+                <select id="tipo-entrega">
+                    <option value="retiro">Retiro en tienda</option>
+                    <option value="envio">Envío a domicilio</option>
+                </select>
+                <p id="costo-envio">Costo de envío: $0</p>
+                <p id="total-pedido">Total: $0</p>
+                <button class="btn-confirmar">Confirmar Pedido</button>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section class="contacto" id="contacto">
+            <h2>Contáctanos</h2>
+            <form>
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
 

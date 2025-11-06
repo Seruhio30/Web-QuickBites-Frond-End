@@ -1,0 +1,29 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+
+# Node.js (si decides usarlo)
+node_modules/
+.env
+
+# Java (si usas IntelliJ o Spring Boot)
+*.class
+*.jar
+*.war
+*.ear
+target/
+out/
+*.iml
+.idea/
+*.log
+
+# VS Code
+.vscode/
+
+# Imágenes temporales o de prueba
+assets/img/temp/

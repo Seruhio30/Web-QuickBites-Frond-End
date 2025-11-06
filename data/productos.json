@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "nombre": "BBQ Pulled Pork",
+    "subtitle": "Tu favorita con salsa BBQ",
+    "descripcion": "Carne 100% res, queso americano, lechuga y tomate.",
+    "precio": 2500,
+    "imagen": "img/img/BQPulledPork-QB.jpeg",
+    "categoria": "hamburguesas",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "nombre" : "Chicken Delight Burguer",
+    "subtitle": "Tu favorita con salsa BBQ",
+    "descripcion": "Extra queso, extra placer",
+    "precio": 2800,
+    "imagen": "img/img/ChickenDelightBurguer-QB.jpeg",
+    "categoria": "hamburguesas",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "nombre": "Quick Bites Burguer",
+    "subtitle": "Extra queso, extra placer",
+    "descripcion": "De la casa ",
+    "precio": 1200,
+    "imagen": "img/img/QuickBitesBurguer-QB.jpeg",
+    "categoria": "hamburguesas",
+    "featured": true
+  }
+  ,
+  {
+    "id": 4,
+    "nombre": "Western Burguer",
+    "subtitle": "Extra queso, extra placer",
+    "descripcion": "Lo mejor al estilo western.",
+    "precio": 1200,
+    "imagen": "img/img/WesternBurguer-QB.jpeg",
+    "categoria": "hamburguesas",
+    "featured": true
+  }
+  ,
+  {
+    "id": 5,
+    "nombre": "Mini-Bites Burguer",
+    "subtitle": "Extra queso, extra placer",
+    "descripcion": "Dos deliciosas mini-burguer con todo el sabor original!",
+    "precio": 1200,
+    "imagen": "img/img/Mini-BitesBurguer-QB.jpeg",
+    "categoria": "hamburguesas",
+    "featured": false
+  }
+  ,
+  {
+    "id": 6,
+    "nombre": "Bites Chicken Bowl",
+    "subtitle": "Sabrosas Palomitas",
+    "descripcion": "Pechugitas de pollo en salsa agriduclce al estilo QUickBites, arroz y verduras!",
+    "precio": 1200,
+    "imagen": "img/img/BitesChickenBowl-QB.jpeg",
+    "categoria": "pollo",
+    "featured": false
+  }
+  ,
+  {
+    "id": 7,
+    "nombre": "Bufalo Wings",
+    "subtitle": "QB-Bufalo Wings",
+    "descripcion": "Las mejores alitas en salsa Bufalo o BBQ, acompañadas con papas fritas",
+    "precio": 1200,
+    "imagen": "img/img/BufaloWings-QB.jpeg",
+    "categoria": "pollo",
+    "featured": false
+  }
+  ,
+  {
+    "id": 8,
+    "nombre": "Birria Bites",
+    "subtitle": "Sabor tradicional, 100% carne",
+    "descripcion": "Los meejores tacos de birria al estilo QB, torilla palmeada y queso derretido!",
+    "precio": 1200,
+    "imagen": "img/img/BirriaBites-QB.jpeg",
+    "categoria": "tacos",
+    "featured": false
+  }
+
+]

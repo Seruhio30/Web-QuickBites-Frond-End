@@ -22,7 +22,7 @@ h3 {
     margin: 0;
 }
 
-/************************************************************************************************/
+/********************HEADER**********************/
 /*    */
 
 header {
@@ -36,7 +36,10 @@ header {
     background-color: var(--primary-color);
     min-height: 180px;
     color: #333;
+
 }
+
+/********************NAV*************************/
 
 .nav-container {
     display: flex;
@@ -65,19 +68,18 @@ header {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
 
 .nav a:hover {
     background-color: #f46e20;
-    /* Cambia el color de fondo al pasar el cursor */
     color: #fff;
-    /* Cambia el color del texto al pasar el cursor */
     transform: scale(1.1);
-    /* Aumenta el tamaño del botón */
 
 }
+
 
 /**************Hamburguer*********************/
 
@@ -98,7 +100,7 @@ header {
     content: "\00D7";
 }
 
-/************************************************/
+/*************FOOTER*************************/
 footer {
     background-color: #f46e20;
     color: black;
@@ -128,14 +130,14 @@ footer {
 }
 
 @media (min-width: 900px) {
-    header{
+    header {
         justify-content: space-around;
         flex-wrap: nowrap;
         padding: 0;
         margin: 0;
     }
 
-    .nav{
+    .nav {
         gap: 2rem;
     }
 

@@ -1,15 +1,24 @@
 @media (min-width: 64rem) {
+  .hero {
+    height: 90vh;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .content h3 {
+    font-size: 1.5rem;
+  }
+
   .content {
-    top: 45%;
-    /* más arriba si se ve muy bajo */
+    background: rgba(0, 0, 0, 0); 
+    
   }
 
-  .banner {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
+  .product-menu {
+    grid-template-columns: repeat(3, 1fr);
   }
-
   /***************nosotros*****************************/
   .nosotros-container {
     display: grid;
