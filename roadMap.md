@@ -16,8 +16,8 @@ Este documento detalla el plan de desarrollo para la aplicación web de pedidos 
 - [x ] Diseñar `index.html` como página principal
 - [ x] Crear componente visual para productos (tarjetas)
 - [x ] Implementar navegación entre secciones con `navigation.js`
-- [ /] Crear vista de carrito con resumen de orden
-- [/ ] Añadir lógica para seleccionar retiro o entrega
+- [ x] Crear vista de carrito con resumen de orden
+- [x ] Añadir lógica para seleccionar retiro o entrega
 
 ---
 

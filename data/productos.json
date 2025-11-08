@@ -7,7 +7,13 @@
     "precio": 2500,
     "imagen": "img/img/BQPulledPork-QB.jpeg",
     "categoria": "hamburguesas",
-    "featured": true
+    "featured": true,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
   },
   {
     "id": 2,
@@ -17,7 +23,14 @@
     "precio": 2800,
     "imagen": "img/img/ChickenDelightBurguer-QB.jpeg",
     "categoria": "hamburguesas",
-    "featured": true
+    "featured": true,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
+  
   },
   {
     "id": 3,
@@ -27,9 +40,15 @@
     "precio": 1200,
     "imagen": "img/img/QuickBitesBurguer-QB.jpeg",
     "categoria": "hamburguesas",
-    "featured": true
-  }
-  ,
+    "featured": true,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
+  },
+  
   {
     "id": 4,
     "nombre": "Western Burguer",
@@ -38,9 +57,15 @@
     "precio": 1200,
     "imagen": "img/img/WesternBurguer-QB.jpeg",
     "categoria": "hamburguesas",
-    "featured": true
-  }
-  ,
+    "featured": true,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
+  },
+  
   {
     "id": 5,
     "nombre": "Mini-Bites Burguer",
@@ -49,9 +74,15 @@
     "precio": 1200,
     "imagen": "img/img/Mini-BitesBurguer-QB.jpeg",
     "categoria": "hamburguesas",
-    "featured": false
-  }
-  ,
+    "featured": false,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
+  },
+  
   {
     "id": 6,
     "nombre": "Bites Chicken Bowl",
@@ -60,9 +91,15 @@
     "precio": 1200,
     "imagen": "img/img/BitesChickenBowl-QB.jpeg",
     "categoria": "pollo",
-    "featured": false
-  }
-  ,
+    "featured": false,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
+  },
+  
   {
     "id": 7,
     "nombre": "Bufalo Wings",
@@ -71,9 +108,15 @@
     "precio": 1200,
     "imagen": "img/img/BufaloWings-QB.jpeg",
     "categoria": "pollo",
-    "featured": false
-  }
-  ,
+    "featured": false,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
+  },
+  
   {
     "id": 8,
     "nombre": "Birria Bites",
@@ -82,7 +125,14 @@
     "precio": 1200,
     "imagen": "img/img/BirriaBites-QB.jpeg",
     "categoria": "tacos",
-    "featured": false
+    "featured": false,
+    "extras": [
+    { "nombre": "Queso", "precio": 300 },
+    { "nombre": "Tocineta", "precio": 500 },
+    { "nombre": "Huevo", "precio": 400 }
+  ],
+  "removibles": ["Tomate", "Lechuga", "Cebolla"]
+  
   }
 
 ]

@@ -3,7 +3,7 @@
 export let productos = []; // Se guarda una vez para no recargar cada vez
 
 // Cargar productos del JSON
-async function cargarProductos() {
+export async function cargarProductos() {
   if (productos.length === 0) {
     const response = await fetch("data/productos.json");
     productos = await response.json();
@@ -31,7 +31,8 @@ export async function mostrarProductos(categoria = "todos") {
       <h3>${producto.nombre}</h3>
       <p>${producto.descripcion}</p>
       <span>₡${producto.precio}</span> <br>
-      <button class="btn" onclick="ordenarProducto(${producto.id})">Ordenar</button>
+      <button onclick="addProducto(${producto.id})">Ordenar</button> 
+
     `;
 
     contenedor.appendChild(tarjeta);

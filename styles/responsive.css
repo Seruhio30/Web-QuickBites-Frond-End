@@ -124,6 +124,82 @@
   transform: scale(1.05);
 }
 
+/* ====== NOTIFICACIONES CARRITO ====== */
+
+.alerta-carrito {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #f46e20;
+  color: #fff;
+  padding: .75rem 1.25rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,.25);
+  z-index: 9999;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .4s ease, transform .4s ease;
+}
+
+.alerta-carrito.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+
+
+/*******************modal de extras***********************/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 1rem;
+  width: 90%;
+  max-width: 400px;
+  border-radius: .5rem;
+}
+
+/********************carrito flotante********************/
+#floating-cart-btn {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  background: #f46e20;
+  color: white;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  z-index: 3000;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+  transition: transform .2s ease;
+}
+
+#floating-cart-btn:hover {
+  transform: scale(1.05);
+}
+
+#floating-cart-btn.hidden {
+  display: none;
+}
+
 
 /******************Section Nosotros**************************************/
 

@@ -100,6 +100,54 @@ header {
     content: "\00D7";
 }
 
+/*************CARRITO (mobile-first)**************/
+.cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 0.5rem; /* separa un poco del borde o del menú */
+}
+
+.cart-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}
+
+/* 🔹 Contador del carrito */
+#cartCount {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  background: #ff9800;
+  color: #221d1d;
+  border-radius: 50%;
+  padding: 4px 6px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+
+/*************RESPONSIVE**************/
+@media (min-width: 768px) {
+  
+
+  .cart-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  #cartCount {
+    top: -8px;
+    right: -8px;
+    font-size: 0.8rem;
+  }
+}
+
 /*************FOOTER*************************/
 footer {
     background-color: #f46e20;

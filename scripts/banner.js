@@ -8,21 +8,21 @@ export async function initBanner() {
 
     const banner = document.querySelector(".banner");
     const title = document.getElementById("hero-title");
-    const subtitle = document.getElementById("hero-subtitle");
+    //const subtitle = document.getElementById("hero-subtitle");
 
     let index = 0;
     banner.src = slides[index].imagen;
     title.textContent = slides[index].nombre;
-    subtitle.textContent = slides[index].descripcion;
+    //subtitle.textContent = slides[index].descripcion;
 
     function changeSlide() {
       index = (index + 1) % slides.length;
-      const { imagen, nombre, descripcion } = slides[index];
+      const { imagen, nombre } = slides[index];
       banner.style.opacity = 0;
       setTimeout(() => {
         banner.src = imagen;
         title.textContent = nombre;
-        subtitle.textContent = descripcion;
+        //subtitle.textContent = descripcion;
         banner.style.opacity = 1;
       }, 1000);
     }

@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/carrito.css">
 </head>
 
 <body>
@@ -56,9 +57,16 @@
             <a href="#banner">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#menu">Menú</a>
-            <a href="pedidos.html">Pedidos</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Pedidos</a>
+           
         </nav>
+
+        <div class="cart-container">
+            <a href="carrito.html">
+                <img src="img/compras.png" alt="Carrito" class="cart-icon">
+                <span id="cartCount">0</span>
+            </a>
+        </div>
 
     </header>
 
@@ -67,7 +75,7 @@
             <img src="img/img/WesternBurguer-QB.jpeg" alt="Banner" class="banner">
             <div class="content">
                 <h1 id="hero-title">Quick Bites</h1>
-                <h3 id="hero-subtitle">Fast Food</h3>
+                
                 <a href="#menu" class="btn">Ordenar</a>
             </div>
         </section>
@@ -106,14 +114,15 @@
             <div id="product-menu" class="product-menu"></div>
         </section>
 
+
         <!-- Sección Carrito -->
         <section class="carrito" id="carrito">
             <h2>Tu Pedido</h2>
             <div class="cart-items">
                 <!-- Productos añadidos -->
             </div>
-            
-            <div class="cart-summary">
+
+            <!--<div class="cart-summary">
                 <label for="tipo-entrega">¿Cómo deseas recibir tu pedido?</label>
                 <select id="tipo-entrega">
                     <option value="retiro">Retiro en tienda</option>
@@ -122,10 +131,10 @@
                 <p id="costo-envio">Costo de envío: $0</p>
                 <p id="total-pedido">Total: $0</p>
                 <button class="btn-confirmar">Confirmar Pedido</button>
-            </div>
+            </div>-->
         </section>
 
-        <!-- Sección Contacto -->
+        <!-- Sección Contacto 
         <section class="contacto" id="contacto">
             <h2>Contáctanos</h2>
             <form>
@@ -134,7 +143,7 @@
                 <textarea placeholder="Mensaje"></textarea>
                 <button type="submit">Enviar</button>
             </form>
-        </section>
+        </section>-->
     </main>
 
     <footer>
@@ -142,6 +151,24 @@
     </footer>
 
     <script type="module" src="scripts/main.js"></script>
+
+    <div id="extrasModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <div id="extras-container"></div>
+
+            <div class="modal-actions">
+                <button id="confirm-extras" class="btn">Añadir al carrito</button>
+                <button id="close-modal" class="btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="floating-cart-btn" class="hidden">
+        🛒 Ver carrito (<span id="float-count">0</span>)
+    </button>
+
+
 </body>
 
 </html>

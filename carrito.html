@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito - Quick Bites</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/carrito.css">
+</head>
+
+<body>
+
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="img/QuickBiteslogo.png" alt="Quick Bites Logo" class="logo">
+      </a>
+    </div>
+
+    <button id="hamburger" class="hamburger" aria-label="Toggle-navigation"></button>
+
+    <nav class="nav" id="nav-bar">
+      <a href="index.html#banner">Inicio</a>
+      <a href="index.html#menu">Menú</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="cart-container">
+      <a href="carrito.html">
+        <img src="img/compras.png" alt="Carrito" class="cart-icon">
+        <span id="cartCount">0</span>
+      </a>
+    </div>
+  </header>
+
+
+
+  <main class="carrito-page">
+
+    <h1 class="titulo-carrito">Tu pedido</h1>
+
+
+    <!--LISTA DE PRODUCTOS -->
+    <div class="cart-items">
+      <!-- Productos desde JS -->
+    </div>
+
+
+    <!--RESUMEN & ENTREGA -->
+    <div class="cart-summary">
+
+      <h2>Resumen</h2>
+
+      <label for="tipo-entrega">¿Cómo deseas recibir tu pedido?</label>
+      <select id="tipo-entrega">
+        <option value="retiro">Retiro en tienda</option>
+        <option value="envio">Envío a domicilio</option>
+      </select>
+
+      <p id="costo-envio">Costo de envío: ₡0</p>
+      <p id="total-pedido">Total: ₡0</p>
+    </div>
+
+
+    <!--INFO DEL PEDIDO -->
+    <section class="checkout">
+
+      <h2>Datos del pedido</h2>
+
+      <label>Nombre *</label>
+      <input type="text" id="nombreCliente" placeholder="Tu nombre" required>
+
+      <label>Dirección (solo si envío)</label>
+      <input type="text" id="direccionCliente" placeholder="Tu dirección">
+
+      <label>Método de pago *</label>
+      <select id="metodoPago">
+        <option value="sinpe">SINPE</option>
+        <option value="efectivo">Efectivo</option>
+      </select>
+
+      <label>Notas</label>
+      <textarea id="notasCliente" placeholder="Notas adicionales..."></textarea>
+
+      <!--ÚNICO BOTÓN FINAL -->
+      <button class="btn-confirmar" id="btnConfirmarPedido">
+        Confirmar Pedido
+      </button>
+
+    </section>
+
+  </main>
+
+
+
+  <footer>
+    <p>© 2024 Quick Bites</p>
+  </footer>
+
+
+
+  <script type="module" src="scripts/carritoPage.js"></script>
+</body>
+
+</html>
