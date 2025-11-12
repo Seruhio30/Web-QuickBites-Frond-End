@@ -35,4 +35,9 @@
     padding: 20px;
     margin-left: 15%;
   }
+
+   .filtros{
+    display: flex;
+  }
+
 }
