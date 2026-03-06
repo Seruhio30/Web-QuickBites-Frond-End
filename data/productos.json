@@ -51,7 +51,7 @@
   
   {
     "id": 4,
-    "nombre": "Western Burguer",
+    "nombre": "Western Burguer", 
     "subtitle": "Extra queso, extra placer",
     "descripcion": "Lo mejor al estilo western.",
     "precio": 1200,
